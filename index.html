@@ -2,7 +2,7 @@
 layout: workshop
 root: .
 venue: LHCb in CERN, Geneva
-address: FIXME (street address of home location)
+address: CERN, Route de Meyrin 385, 1217 Meyrin, Switzerland
 country: Switzerland
 language: en
 latlng: 46.233489,6.052651
@@ -11,7 +11,7 @@ humantime: 9:00 am - 4:30 pm
 startdate: 2015-06-02
 enddate: 2015-06-03
 instructor: ["Rémi Emonet", "Kwasi Kwakwa", "Chelsea Chisholm"]
-helper: ["TODO", "FIXME"]
+helper: ["Tim Head", "Kevin Dungs", "Jacco Andreas De Vries", "Igor Babuschkin", "Conor Fitzpatrick", "Alex Pearce"]
 contact: FIXME (contact email address for workshop organizer)
 etherpad: # FIXME (insert the URL for your Etherpad if you're using one)
 ---
@@ -106,9 +106,7 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong> Participants must bring a laptop with
-  a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  <strong>Requirements:</strong> Participants are required to abide by
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
 </p>
@@ -144,24 +142,59 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Day 1</h3>
+    <h3>Room A - Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
+      <tr> <td>09:00</td>  <td>Introduction and Welcome</td> </tr>
+      <tr> <td>09:15</td>  <td>Automating tasks with the Unix shell</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>10:45</td>  <td>Automating tasks with the Unix shell</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
       <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>13:45</td>  <td>Building programs with Python</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
-    <h3>Day 2</h3>
+    <h3>Room B - Day 1</h3>
+    <table class="table table-striped">
+      <tr> <td>09:00</td>  <td>Introduction and Welcome</td> </tr>
+      <tr> <td>09:15</td>  <td>Automating tasks with the Unix shell</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>10:45</td>  <td>Automating tasks with the Unix shell</td> </tr>
+      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>13:45</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3>Room A - Day 2</h3>
+    <table class="table table-striped">
+      <tr> <td>09:00</td>  <td>Consolidation and recap of day 1</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>10:45</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>14:45</td>  <td>Summarizing exercices</td> </tr>
+      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h3>Room B - Day 2</h3>
     <table class="table table-striped">
       <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>10:45</td>  <td>Version control with Git</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Advanced topics (Shell, Python)</td> </tr>
+      <tr> <td>13:00</td>  <td>Summarizing exercices</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>14:45</td>  <td>Advanced topics (Shell, Python, Git)</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
@@ -294,7 +327,13 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   'tools/check' as well.
 -->
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Setup (not required) </h2>
+
+<p>
+<b>
+The CERN environment will have the required software pre-installed, however if you would like to install the software on your own computer (either before or after the workshop), here are the instructions to do so.
+</b>
+<p>
 
 <p>
   To participate in a Software Carpentry workshop, you will need 
@@ -307,6 +346,66 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   that may be useful on the
   <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
+
+<div id="editor"> <!-- Start of 'editor' section. -->
+  <h3>Text Editor</h3>
+
+  <p>
+    When you're writing code, it's nice to have a text editor that is
+    optimized for writing code, with features like automatic
+    color-coding of key words.  The default text editor on Mac OS X and
+    Linux is usually set to Vim, which is not famous for being
+    intuitive.  if you accidentally find yourself stuck in it, try
+    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
+    exclamation mark), then hitting Return to return to the shell.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="editor-windows">Windows</h4>
+      <p>
+        nano is a basic editor and the default that instructors use in the workshop.
+        To install it, 
+        download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>
+        and double click on the file to run it.
+        <strong>This installer requires an active internet connection.</strong>
+      </p>
+      <p>
+        Others editors that you can use are
+        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
+        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+        <strong>Be aware that you must
+          add its installation directory to your system path.</strong>
+        Please ask your instructor to help you do this.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="editor-macosx">Mac OS X</h4>
+      <p>
+        nano is a basic editor and the default that instructors use in the workshop.
+        It should be pre-installed.
+      </p>
+      <p>
+        Others editors that you can use are
+        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="editor-linux">Linux</h4>
+      <p>
+        nano is a basic editor and the default that instructors use in the workshop.
+        It should be pre-installed.
+      </p>
+      <p>
+        Others editors that you can use are
+        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
+        <a href="http://kate-editor.org/">Kate</a> or
+        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+      </p>
+    </div>
+  </div>
+</div> <!-- End of 'editor' section. -->
 
 <div id="shell"> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
@@ -395,66 +494,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
     </div>
   </div>
 </div> <!-- End of 'Git' section. -->
-
-<div id="editor"> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
-
-  <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on Mac OS X and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="editor-windows">Windows</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        To install it, 
-        download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>
-        and double click on the file to run it.
-        <strong>This installer requires an active internet connection.</strong>
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx">Mac OS X</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-linux">Linux</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-        <a href="http://kate-editor.org/">Kate</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'editor' section. -->
 
 <div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
            the workshop will teach Python using something other than
