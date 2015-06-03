@@ -1,0 +1,109 @@
+  504  ls
+  505  git
+  506  git config --global user.name 'Remi Emonet'
+  507  git config --global user.email 'remi.emonet__AT__univ-st-etienne.fr'
+  508  git config --global color.ui auto
+  509  git config --list
+  510  man git
+  511  git help config
+  512  mkdir thesis
+  513  cd thesis/
+  514  git init
+  515  git status
+  516  ls
+  517  ls -a
+  518  ls .git
+  519  emacs manuscipt.tex
+  520  emacs manuscipt.tex
+  521  bg
+  522  locate .tex | grep Tricks
+  523  locate .tex | grep Tricks
+  524  emacs /home/twilight/projects/ResearchTipsAndTricks/PaperMakefile/mypaper.tex 
+  525  ls
+  526  ls
+  527  rm manuscipt.tex~
+  528  ls
+  529  mv manuscipt.tex manuscript.tex 
+  530  cat manuscript.tex 
+  531  git status
+  532  git add manuscript.tex 
+  533  git status 
+  534  git commit
+  535  git status
+  536  git commit
+  537  git status
+  538  git status
+  539  rm manuscipt.tex 
+  540  git status
+  541  git status
+  542  git status
+  543  git add manuscript.tex 
+  544  git status
+  545  git commit -m 'adding the state of the art'
+  546  git log
+  547  echo 'write the paper' >> todo.txt
+  548  echo 'submit' >> todo.txt
+  549  echo 'get accepted' >> todo.txt
+  550  echo 'celebrate' >> todo.txt
+  551  cat todo.txt 
+  552  git status
+  553  git commit
+  554  git add todo.txt 
+  555  git status
+  556  git commit
+  557  git log 
+  558  git help log 
+  559  git log -p
+  560  git status 
+  561  git diff
+  562  git add manuscript.tex 
+  563  git add todo.txt 
+  564  git status
+  565  git diff
+  566  git status
+  567  git diff
+  568  git commit -m 'changes to the two files'
+  569  git status
+  570  git diff
+  571  git log
+  572  git diff
+  573  git diff cf9932c806968f114f098c53b10b7202a17dd738
+  574  git diff cf993
+  575  git diff cf993
+  576  git log
+  577* git diff 
+  578  git diff cf993 09a5d4b22
+  579  git diff HEAD
+  580  git diff HEAD
+  581  git diff cf993
+  582  git diff HEAD~
+  583  git diff HEAD~~
+  584  git diff HEAD~~~
+  585  git diff HEAD~~~~
+  586  git diff HEAD~10
+  587  git diff HEAD~2
+  588  git diff HEAD-
+  589  git status
+  590  git add todo.txt 
+  591  git commit -m 'adding yeah'
+  592  git status
+  593  ls
+  594  ls
+  595  ls -a
+  596  git status
+  597  git status
+  598  touch manuscript.tex~
+  599  git status
+  600  pdflatex manuscript.tex 
+  601  git status
+  602  emacs .gitignore
+  603  bg
+  604  git status
+  605  git status
+  606  git status
+  607  git status
+  608  git status
+  609  git status
+  610  git add .gitignore 
+  611  git commit -m 'ignoring files'
+  612  git status

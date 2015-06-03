@@ -1,0 +1,25 @@
+  513  ls post-workshop/
+  514  cd post-workshop/
+  515  ipython2.7 nbconvert ~swc/2015-06-02-data/higgs/HiggsBosonKaggle.ipynb 
+  516  ls
+  517  git add HiggsBosonKaggle.html 
+  518  cd ..
+  519  emacs index.html 
+  520  bg
+  521  git add index.html 
+  522  git status 
+  523  git commit -m 'adding the Higgs boson ipynb'
+  524  git push 
+  525  cp ~swc/2015-06-02-data/Higgs.html post-workshop/HiggsScatter.html
+  526  git add post-workshop/HiggsScatter.html 
+  527  emacs index.html 
+  528  git add index.html 
+  529  git ci -m '"old" higgs boson'
+  530  git push 
+  531  ipython2.7 nbconvert --help
+  532  ipython2.7 nbconvert -to python ~swc/2015-06-02-data/higgs/HiggsBosonKaggle.ipynb 
+  533  ipython2.7 nbconvert --to python ~swc/2015-06-02-data/higgs/HiggsBosonKaggle.ipynb 
+  534  emacs HiggsBosonKaggle.py
+  535  history 
+  536  history 
+  537  history > /tmp/h1

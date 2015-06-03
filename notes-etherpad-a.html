@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/ZJC3cSKeby</title>
+</head>
+<body>To look at a demonstration (that works) of the ipython notebook<br
+/><br
+/><a href="http://tmpnb.org">http://tmpnb.org</a><br
+/><br
+/>Just click the link!<br
+/><br
+/>(exercise at the bottom)<br
+/><br
+/><br
+/><br
+/><br
+/><b>Room A</b><br
+/><br
+/><b>BASH</b><br
+/><br
+/>cd<br
+/>cd Desktop<br
+/>git clone <a href="http://github.com/twitwi/2015-06-02-data.git">http://github.com/twitwi/2015-06-02-data.git</a><br
+/><br
+/>whoami<br
+/>pwd<br
+/><br
+/>ls<br
+/>ls -F<br
+/><br
+/>cd 2015-06-02-data<br
+/>cd Users<br
+/>cd nelle<br
+/>ls -F<br
+/>pwd<br
+/><br
+/>cd ..<br
+/>pwd<br
+/><br
+/>ls -F<br
+/>ls -F -a<br
+/><br
+/>ls north-pacific-gyre/2012-07-03<br
+/><br
+/><b>use the "tab" key to auto-complete (shows possible completions)</b><br
+/><b>two tabs to complete</b><br
+/><br
+/><br
+/>Exercice: If pwd displays /Users/thing, what will ls ../backup display?<br
+/>../backup: No such file or directory<br
+/>2012-12-01 2013-01-08 2013-01-27<br
+/>2012-12-01/ 201301-08/ 2013-01-27/<br
+/>original pnas_final pnas_sub<br
+/><br
+/><br
+/>"cd" without parameters -&gt; go back to the home directory<br
+/>"cd -" -&gt; switches back to the previous directory you were in<br
+/><br
+/>cd nelle<br
+/>mkdir thesis<br
+/>ls -F<br
+/>ls -F thesis<br
+/>cd thesis<br
+/><br
+/>nano draft.txt<br
+/>#&nbsp; a simple text editor<br
+/># Control+O to write out the file<br
+/><br
+/>ls<br
+/>rm draft.txt<br
+/># removes without garbage bin<br
+/>ls<br
+/><br
+/>todo: recreate the draft.txt using nano<br
+/><br
+/>cd ..<br
+/>rm thesis<br
+/># does not work, thesis is a directory<br
+/>rmdir thesis<br
+/># does not work, thesis is not embty<br
+/>rm thesis/draft.txt<br
+/>rmdir thesis<br
+/># this time, it is removed<br
+/><br
+/># recreating<br
+/>mkdir thesis<br
+/>nano thesis/draft.txt<br
+/>ls thesis<br
+/>mv thesis/draft.txt thesis/quotes.txt<br
+/># move/rename a file<br
+/>ls thesis<br
+/><br
+/>mv thesis/quotes.txt .<br
+/><br
+/>cp quotes.txt thesis/quotations.txt<br
+/>ls thesis<br
+/><br
+/>rm quotes.txt<br
+/>ls<br
+/><br
+/><b>use up and down arrows to explore the commands you typed</b><br
+/><br
+/><br
+/><a href="http://swcarpentry.github.io/shell-novice/02-create.html">http://swcarpentry.github.io/shell-novice/02-create.html</a><br
+/><br
+/><a href="http://swcarpentry.github.io/shell-novice/04-loop.html">http://swcarpentry.github.io/shell-novice/04-loop.html</a><br
+/><br
+/>cd creatures<br
+/><br
+/>for filename in basilisk.dat unicorn.dat<br
+/>&gt; do<br
+/>&gt;&nbsp;&nbsp;&nbsp; head -3 $filename<br
+/>&gt; done<br
+/><br
+/>remember 'filename' is just a variable holding the name of the actual file you care about<br
+/><br
+/>for filename in *.dat<br
+/>do<br
+/>&nbsp;&nbsp;&nbsp; echo $filename<br
+/>&nbsp;&nbsp;&nbsp; head -100 $filename | tail -20<br
+/>done<br
+/><br
+/>for filename in *.dat<br
+/>do<br
+/>&nbsp;&nbsp;&nbsp; mv $filename original-$filename<br
+/>done<br
+/><br
+/>for datafile in *[AB].txt<br
+/>do<br
+/>&nbsp;&nbsp;&nbsp; echo $datafile<br
+/>done<br
+/><br
+/>for datafile in *[AB].txt; do echo; $datafile stats-$datafile; done<br
+/><br
+/>nano middle.sh<br
+/>head -15 octane.pdb | tail -5<br
+/><br
+/>bash middle.sh<br
+/><br
+/><b>PYTHON</b><br
+/><br
+/><b>Start ipython</b><br
+/>#data on inflammation across a number of patients over time<br
+/>cd python/data # or wherever you've landed your data<br
+/>ls<br
+/>cat inflammation-01.csv<br
+/><br
+/>ipython<br
+/><br
+/><b>Data manipulation</b><br
+/>import numpy as np<br
+/>np.loadtxt(fname="inflammation-01.csv", delimiter=',')<br
+/><br
+/>data=np.loadtxt(fname="inflammation-01.csv", delimiter=',')<br
+/>print data<br
+/>print type(data)<br
+/>print data.shape<br
+/>print 'first value in data: ', data[0,0]<br
+/>print 'middle value in data: ', data[30,20]<br
+/>#first 10 x 10<br
+/>data[:10, :10]<br
+/>#last 10 x 10<br
+/>data[-10:,-10:]<br
+/>data[5:15,5:15]<br
+/>#max and min values of array<br
+/>data.max()<br
+/>data.min()<br
+/>data.mean()<br
+/>#can also specify which dimension<br
+/>data.mean(axis=0) #column<br
+/>data.mean(axis=1) #rows<br
+/><br
+/><b>Plotting</b><br
+/>import matplotlib.pyplot<br
+/>image=matplotlib.pyplot.imshow(data)<br
+/>matplotlib.pyplot.show(image)<br
+/>#mean plotting<br
+/>ave_inflammation = data.mean(axis=0)<br
+/>ave_plot = matplotlib.pyplot.plot(ave_inflammation)<br
+/>matplotlib.pyplot.show(ave_plot)<br
+/>#minimum plotting<br
+/>min_plot = matplotlib.pyplot.plot(data.min(axis=0))<br
+/>matplotlib.pyplot.show(min_plot)<br
+/><br
+/>exit()<br
+/>ipython<br
+/>import numpy as np<br
+/>import matplotlib.pyplot as plt<br
+/>#sticking to naming conventions makes life easier!<br
+/><br
+/><b>Plotting multiple figures on same graph</b><br
+/>data = np.loadtxt('inflammation-01.csv', delimiter=',')<br
+/>fig = plt.figure(figsize=(10.0, 3.0))<br
+/>axes1=fig.add_subplot(1,3,1)<br
+/>axes2=fig.add_subplot(1,3,2)<br
+/>axes3=fig.add_subplot(1,3,3)<br
+/>axes1.set_ylabel('average')<br
+/>axes1.plot(data.mean(axis=0))<br
+/>axes2.set_ylabel('max')<br
+/>axes2.plot(data.max(axis=0))<br
+/>axes3.set_ylabel('min')<br
+/>axes3.plot(data.min(axis=0))<br
+/>fig.tight_layout()<br
+/>plt.show(fig)<br
+/><br
+/>name='Kwasi'<br
+/>name[2]<br
+/>name[:2]<br
+/>name[2] = 'x' #error with changing string in place<br
+/><br
+/>firstname = 'Bat'<br
+/>lastname = 'man'<br
+/>firstname + lastname<br
+/><br
+/><b>Loops in python</b><br
+/>name<br
+/>for i in name:<br
+/>&nbsp;&nbsp;&nbsp; print i<br
+/>#note diff between python and bash<br
+/><br
+/>range(1,10)<br
+/>for i in range(20):<br
+/>&nbsp;&nbsp;&nbsp; print i*2<br
+/><br
+/>%history will get you all the commands you have typed in the running session<br
+/><br
+/><b>Lists</b><br
+/>#an array can only contain numbers- list is a general purpose container, can hold different types<br
+/>[1,3,5,7,9]<br
+/>list1 = [1,3,5,'hello']<br
+/>list1[2]<br
+/>list1[-2:]<br
+/><br
+/>for item in list1<br
+/>&nbsp;&nbsp;&nbsp; print item<br
+/>list1[2] = 25<br
+/>list1<br
+/>list1.remove(3)<br
+/>list1.reverse()<br
+/><br
+/>import glob<br
+/>glob.glob('*.txt')<br
+/>glob.glob('*.csv')<br
+/>inflammationlist = glob.glob('inflammation*.csv')<br
+/><br
+/>for file in inflammationlist:<br
+/>&nbsp;&nbsp;&nbsp; print file<br
+/>&nbsp;&nbsp;&nbsp; data = np.loadtxt(file, delimiter=',')<br
+/>&nbsp;&nbsp;&nbsp; print data.mean(axis=0)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><b>Conditionals</b><br
+/>#works similar to a loop in python<br
+/>testval = 37<br
+/>if testval &gt; 100:<br
+/>&nbsp;&nbsp;&nbsp; print 'greater'<br
+/>else:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'not greater'<br
+/>print 'done' #not a part of conditions, will run at the end<br
+/><br
+/>if testval &gt;100:<br
+/>&nbsp;&nbsp;&nbsp; print 'less than 100'<br
+/>else: print 'equal to 100'<br
+/>print 'done'<br
+/><br
+/><b>Functions&nbsp;</b><br
+/>def fahr_to_kelvin(temp):<br
+/>&nbsp;&nbsp;&nbsp; return((temp-32)*(5./9) +273.15)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>fahr_to_kelvin(100)<br
+/><br
+/>def suareslow(number):<br
+/>&nbsp;&nbsp;&nbsp; return number**2<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>suareslow(5)<br
+/><br
+/>def suareslow(number):<br
+/>&nbsp;&nbsp;&nbsp; '''function takes a number and returns its square'''<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return number**2<br
+/><br
+/>help(suareslow)<br
+/>help(np.loadtxt)<br
+/>squareslow? #works too, prints out help directly<br
+/><br
+/>For using jupyter- seems like it works on the local network, not on the remote machines (if you are running into errors).<br
+/><br
+/>Challenge 1:<br
+/>what should I expect to see if I run the code below?<br
+/><br
+/>x = 0<br
+/>y = 3<br
+/>d = x*x + y*y<br
+/>print (x, y, d)<br
+/>(0,3,9)&nbsp;<br
+/>x = 4<br
+/>print (x, y, d)<br
+/>(4,3,9)<br
+/><br
+/>Challenge 2: create a plot showing the standard deviation (numpy.std) of the inflammation data across patients<br
+/><br
+/>Challenge 3:<br
+/>Write a loop that takes a string and returns a new string in reverse order<br
+/>2 hints: len() will tell you the length of a string<br
+/>range can run backwards<br
+/><br
+/>Challenge 4:<br
+/>write a function that takes the name of an inflammation file and returns the largest and smallest values in the file<br
+/>hint: you can return a list<br
+/><br
+/><br
+/><b>Regular expressions </b>(ex. what we referred to as wildcards)<br
+/><br
+/>You can use 'grep' to search for a particular string in a file.<br
+/><br
+/>#Ex. nano data.txt to contain:<br
+/>#who what when&nbsp;<br
+/>#where whenever<br
+/>grep when data.txt<br
+/>grep -w when data.txt #only the word on its own<br
+/>grep -n when data.txt #the line with matches<br
+/>grep -n -w -i When data.txt #case-insensitive, can string together modifiers<br
+/>#can invert using -v<br
+/><br
+/>#To see other options with grep, use:<br
+/>man grep #type q to quit<br
+/><br
+/>. matches a single character<br
+/>? matches preceding items once at most<br
+/>* preceding items matched 0 or + times<br
+/>^ matches the beginning of the line<br
+/>$ matches at end of line<br
+/>\b matches at edge of word<br
+/>\&lt; matches empty string at beginning of word<br
+/>\&gt; matches empty string at end of word<br
+/><br
+/>You can also give it a range of expressions. For example, you could say<br
+/>[0123456789], which would match any number within those brackets. Alternatively you<br
+/>could give it a hyphen as shorthand, so say [a-c] is the same as [abc].<br
+/>grep [0-9] data.txt #shouldn't match anything<br
+/>grep [a-z] data.txt #should match all the lines<br
+/><br
+/>We already went over the * and ? as wildcards. * matches to multiple characters, . or ? matches to single characters.<br
+/>If you are looking for the actual * character, remember to throw it in quotes. ex. '*'<br
+/>[AB] showed we could use either or to match, in this case A or B.<br
+/><br
+/>You can use two regular expressions by joining using the pipe command '|'<br
+/><br
+/>In order to use regular expressions with grep you need to use the -E flag or use 'egrep' instead.<br
+/><br
+/>Nice website to look up and test regular expressions: <a href="http://www.regexr.com">http://www.regexr.com</a><br
+/><br
+/><br
+/>Solution to error "403 forbidden" with GitHub<br
+/><br
+/>error: The requested URL returned error: 403 Forbidden while accessing <a href="https://github.com/nicoleblah/planets.git/info/refs">https://github.com/nicoleblah/planets.git/info/refs</a><br
+/><br
+/>use&nbsp;<br
+/><br
+/>git remote set-url origin <a href="https://YOURGITHUB_USERNAME@github.com/YOURGITHUB_USERNAME/planets.git">https://YOURGITHUB_USERNAME@github.com/YOURGITHUB_USERNAME/planets.git</a><br
+/><br
+/>git push origin master<br
+/><br
+/><br
+/><br
+/></body>
+</html>

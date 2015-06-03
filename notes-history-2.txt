@@ -1,0 +1,175 @@
+  327  head "" "octane.pdb" | tail 
+  328  for i in *.pdb ; do echo "FILE $i"; bash middle.sh "$i" -5 -2; done
+  329  for i in *.pdb ; do echo "FILE $i"; bash middle.sh "$i" ; done
+  330  for i in *.pdb ; do echo "FILE $i"; bash middle.sh "$i" -5 -2; done
+  331  for i in *.pdb ; do echo "FILE $i"; bash middle.sh "$i" -5 -2; done
+  332  bash middle.sh octane.pdb -5 -2
+  333  for i in *.pdb ; do echo "FILE $i"; bash middle.sh "$i" -5 -2; done
+  334  bash middle.sh octane.pdb -5 -2
+  335  bash middle.sh octane.pdb 5 2
+  336  bash middle.sh octane.pdb 4 2
+  337  bash middle.sh octane.pdb 2 2
+  338  bash middle.sh octane.pdb 5 2
+  339  bash middle.sh octane.pdb 5 3
+  340  bash middle.sh octane.pdb 5 3
+  341  bash middle.sh octane.pdb 5 10
+  342  bash middle.sh octane.pdb 5 10
+  343  bash middle.sh octane.pdb 10 5
+  344  bash middle.sh octane.pdb 10 2
+  345  i=123
+  346  echo $i
+  347  echo $i$i$i
+  348  echo $(( 1 + 2 ))
+  349  echo $(( 1 + 2 * 5 + 1))
+  350  bash middle.sh octane.pdb 5 7
+  351  head octane.pdb 
+  352  bash middle.sh octane.pdb 5 8
+  353  ls
+  354  pwd
+  355  cd ../writing/
+  356  ls
+  357  head haiku.txt 
+  358  grep not haiku.txt 
+  359  \grep not haiku.txt 
+  360  grep not haiku.txt 
+  361  grep --color not haiku.txt 
+  362  grep it haiku.txt
+  363  grep it haiku.txt
+  364  man grep
+  365  grep --help
+  366  grep --help 
+  367  grep --help | grep number
+  368  grep --line-number it haiku.txt 
+  369  grep --line-number -w it haiku.txt 
+  370  grep --line-number it haiku.txt 
+  371  grep --help
+  372  grep --help | less
+  373  man less
+  374  ll
+  375  man grep
+  376  grep --line-number -H it haiku.txt 
+  377  grep --line-number -H -r it haiku.txt 
+  378  grep --line-number -H -r it .
+  379  grep --line-number -H -r it .
+  380  ls
+  381  ls 
+  382  ls */*.txt
+  383  echo */*.txt
+  384  echo data/one.txt data/two.txt
+  385  ls */*.txt
+  386  ls *.txt */*.txt
+  387  ls *.txt */*.txt */*/*.txt
+  388  ls -R
+  389  ls -R | grep txt
+  390  find
+  391  find .
+  392  find  tools/
+  393  find .
+  394  find . 
+  395  find . -name *.txt
+  396  ls *.txt
+  397  ecoh *.txt
+  398  echo *.txt
+  399  find . -name haiku.txt
+  400  cp haiku.txt old/
+  401  find . -name haiku.txt
+  402  find . -name *.txt
+  403  find . -name '*.txt'
+  404  man find
+  405  find . -maxdepth 1 -name '*.txt'
+  406  find . -maxdepth 2 -name '*.txt'
+  407  find . -mindepth 2 -name '*.txt'
+  408  find . -name '*.txt' -name 'one*'
+  409  find . -name '*.txt' -or -name '*.md'
+  410  find . -name '*.txt' -or -name '*.md' -exec echo {} ';'
+  411  find . '(' -name '*.txt' -or -name '*.md' ')' -exec echo {} ';'
+  412  find . '(' -name '*.txt' -or -name '*.md' ')' -exec echo {} {} ';'
+  413  pwd
+  414  ls
+  415  ls
+  416  cd ../
+  417  ls
+  418  cd ..
+  419  ls
+  420  cd ..
+  421  ls
+  422  pwd
+  423  cd ../python/
+  424  ll
+  425  ls
+  426  ipython2.7 notebook data/
+  427  bg
+  428  ipython2.7 notebook data/
+  429  bg
+  430  ls
+  431  ls
+  432  ls
+  433  cd
+  434  ls
+  435  cd 2015-06-02-data/
+  436  ls
+  437  cd data/users/
+  438  find -name middle.sh
+  439  cd nelle/molecules/
+  440  ls
+  441  emacs middle.sh&
+  442  bash middle.sh octane.pdb 5 8
+  443  ./middle.sh octane.pdb 5 8
+  444  ls -l middle.sh
+  445  chmod u+x middle.sh
+  446  ls -l middle.sh
+  447  chmod g+x middle.sh
+  448  ls -l middle.sh
+  449  chmod o-r middle.sh
+  450  ls -l middle.sh
+  451  ./middle.sh octane.pdb 5 8
+  452  ./middle.sh octane.pdb 5 8
+  453  bash ./middle.sh octane.pdb 5 8
+  454  which bash
+  455  which grep
+  456  which ls
+  457  /bin/bash ./middle.sh octane.pdb 5 8
+  458  ./middle.sh octane.pdb 5 8
+  459  which python
+  460  ./middle.sh octane.pdb 5 8
+  461  ./middle.sh octane.pdb 5 8
+  462  cd
+  463  cd 2015-06-02-data/python/data/
+  464  pwd
+  465  pwd
+  466  ipython notebook
+  467  echo ipython notebook
+  468  find -name '*.sv'
+  469  find -name '*.csv'
+  470  find -name '*csv'
+  471  find
+  472  cd ../
+  473  ls
+  474  cd ..
+  475  ls
+  476  cd 
+  477  cd 2015-06-02-data/
+  478  ls
+  479  find
+  480  ls
+  481  git st .
+  482  ll
+  483  cd
+  484  cd 2015-06-02-data/data/
+  485  cd ../python/data/
+  486  ipython2.7 notebook
+  487  cd ..
+  488  ipython2.7 notebook
+  489  bg
+  490  ls
+  491  nbconv
+  492  ls
+  493  ll data/
+  494  ls
+  495  ll
+  496  firefox PythonDemo1.html 
+  497  for i in *.ipynb ; do ipython2.7 nbconvert $i ; done
+  498  firefox *.html
+  499  ll
+  500  ls
+

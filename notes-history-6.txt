@@ -1,0 +1,40 @@
+  633  curl  'http://127.0.0.1:8889/notebooks/daba2618-ea35-42ae-95e2-3ac46407c1af?format=py' -o myexportednotebook.py
+  634  emacs myexportednotebook.py 
+  635  bg
+  636  ls
+  637  echo '!echo hello' >> test.py
+  638  ipython test.py 
+  639  ipython -i test.py 
+  640  python myexportednotebook.py 
+  641  python2.7 myexportednotebook.py 
+  642  ls
+  643  ls higgs/
+  644  python2.7 myexportednotebook.py 
+  645  python2.7 myexportednotebook.py 
+  646  python2.7 myexportednotebook.py
+  647  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  648  python2.7 myexportednotebook.py higgs/
+  649  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  650  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  651  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  652  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  653  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  654  python2.7 -i myexportednotebook.py higgs/subtraining.csv 
+  655  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  656  python2.7 -i myexportednotebook.py higgs/subtraining.csv 
+  657  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  658  eog lucky.png 
+  659  eog lucky.png 
+  660  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  661  ls
+  662  e lucky.pdf 
+  663  evince lucky.pdf
+  664  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  665  evince lucky.pdf
+  666  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  667  inkview lucky.svg 
+  668  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  669  python2.7 myexportednotebook.py higgs/subtraining.csv 
+  670  python2.7 myexportednotebook.py higgs/subtraining.csv hello.jpg
+  671  eog hello.jpg 
+  672  cd ..

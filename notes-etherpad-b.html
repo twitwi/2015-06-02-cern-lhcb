@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/nqOTbdJEbk</title>
+</head>
+<body>Room B<br
+/><br
+/>cd<br
+/>cd Desktop<br
+/>git clone <a href="http://github.com/twitwi/2015-06-02-data.git">http://github.com/twitwi/2015-06-02-data.git</a><br
+/><br
+/><br
+/>wc data/users/nelle/north-pacific-gyre/2012-07-03/NE* | sort -n | cat $(head -1)<br
+/>Thanks.<br
+/>cat: 240: No such file or directory<br
+/>Exactly, it tries to access the word count, line count etc. as well. That seems to be less ideal if you want to remove files.<br
+/><br
+/>Remove numbers from the front:<br
+/>wc -l *txt | sort -n | head -1 | cat $(sed -e "s/[0-9]*\s/ /g")<br
+/><br
+/>Or ignore it:<br
+/>wc -l *.txt |sort | head -1 | cat $(awk '{print $2}')<br
+/><br
+/>Alternatively&nbsp;<br
+/><br
+/>cat `ls *.txt|head -1`<br
+/>cat $(ls *.txt|head -1)<br
+/><br
+/>Will both display the first text file<br
+/><br
+/>In case it gets more complicated I recommend awk :)<br
+/><br
+/>challenge: write a loop that renames each of your files from *.dat to original-*.dat<br
+/>green sticker when you are done<br
+/><br
+/>Better challenge: Append the original, instead of prepend. I.e. rename *.dat to *-original.dat.&nbsp;<br
+/>Tip: use rev and cut!<br
+/><br
+/># works on lists as well:<br
+/>def normalize_data(data):<br
+/>&nbsp;&nbsp;&nbsp; return (data - np.mean(data))/np.std(data)<br
+/><br
+/>the notebooks from day 1 are now linked below the planning <a href="http://twitwi.github.io/2015-06-02-cern-lhcb/">http://twitwi.github.io/2015-06-02-cern-lhcb/</a><br
+/><br
+/></body>
+</html>

@@ -1,0 +1,121 @@
+  705  ls
+  706  cd
+  707  cd 2015-06-02-data/
+  708  ls
+  709  cd data/
+  710  ls
+  711  cd users/nelle/creatures/
+  712  ls
+  713  cd ../molecules/
+  714  ls
+  715  cat cubane.pdb 
+  716  cat middle.sh
+  717  cat cubane.pdb 
+  718  cat cubane.pdb |wc -l
+  719  tail -19 cubane.pdb 
+  720  tail -18 cubane.pdb 
+  721  head -19 cubane.pdb 
+  722  head -19 cubane.pdb |tail -17
+  723  head -19 cubane.pdb |tail -17 | sort 
+  724  man sort 
+  725  man sort 
+  726  head -19 cubane.pdb |tail -17 | sort -r
+  727  head -19 cubane.pdb |tail -17 | sort
+  728  man sort
+  729  head -19 cubane.pdb |tail -17 | sort -k 2
+  730  head -19 cubane.pdb |tail -17 | sort -k 2 -n
+  731  head -19 cubane.pdb |tail -17 | sort -k 2 -n -r
+  732  cat cubane.pdb
+  733  export PS1='$ '
+  734  cat cubane.pdb | awk ' $2 == 9 { print("hello") } '
+  735  cat cubane.pdb | awk ' $2 == 9 { print } '
+  736  cat cubane.pdb | awk ' $2 == 9 { print $5 + $6 } '
+  737  cat cubane.pdb | awk ' $2 == 9 { print $5 + $6 }  { sum = sum + $5 ; print sum }'
+  738  cat cubane.pdb | awk ' { sum = sum + $5 ; print sum }'
+  739  cat cubane.pdb | awk ' { sum = sum + $5} END {print sum }'
+  740  head -19 cubane.pdb |tail -17 | sort -k 5 -n -r
+  741  head -19 cubane.pdb |tail -17 | sort -k 5 -g -r
+  742  head -19 cubane.pdb |tail -17 | sort -k 6 -g -r
+  743  head -19 cubane.pdb |tail -17 | sort -k 5 -g -r
+  744  man sort
+  745  head -19 cubane.pdb |tail -17 | sort -k 5 -g
+  746  bash
+  747  ls
+  748  cat cubane.pdb 
+  749  cat cubane.pdb | sed 's@T@t@g'
+  750  cat cubane.pdb | sed 's@T@t@'
+  751  cat cubane.pdb | sed 's@O@Z@'
+  752  cat cubane.pdb | sed 's@O@Z@g'
+  753  cat cubane.pdb | sed 's@T@@g'
+  754  cat cubane.pdb | sed 's@ATOM@AOM@g'
+  755  cat cubane.pdb | sed -e 's@ATOM@AOM@g'
+  756  cat cubane.pdb | sed -e 's@ATOM@AOM@g' -e 's@H@Whatever@g'
+  757  cat cubane.pdb | sed -e 's@ATOM@AOM@g' -e 's@OM@Whatever@g'
+  758  cat cubane.pdb | sed -e 's@ATOM@AOM@g' -e 's@AOM@Whatever@g'
+  759  cat cubane.pdb | sed -e 's@AOM@Whatever@g' -e 's@ATOM@AOM@g' 
+  760  cat cubane.pdb | sed 's@AOM@Whatever@g'
+  761  cat cubane.pdb | sed 's@ATOM@AOM@g' 's@AOM@Whatever@g'
+  762  cat cubane.pdb | sed -e 's@ATOM@AOM@g' -e 's@AOM@Whatever@g'
+  763  cat cubane.pdb | grep -v 'ATOM'
+  764  cat cubane.pdb | grep -v 'ATOM'
+  765  cat cubane.pdb | sed -n 3:5
+  766  cat cubane.pdb | sed n3:5
+  767  cat cubane.pdb | sed -e n35
+  768  man sed
+  769  man sed
+  770  cat cubane.pdb | sed d3-5
+  771  cat cubane.pdb | sed d3:5
+  772  cat cubane.pdb | sed d3
+  773  cat cubane.pdb | sed -e d3
+  774  cat cubane.pdb | sed -e 3d
+  775  cat cubane.pdb | sed 3d
+  776  cat cubane.pdb | sed -e 3d
+  777  cat cubane.pdb | sed -e 1d
+  778  cat cubane.pdb | sed -e 1-2d
+  779  cat cubane.pdb | sed -e 1:2d
+  780  cat cubane.pdb | sed -e 1.2d
+  781  cat cubane.pdb | sed -e 1-2d
+  782  cat cubane.pdb | sed -e 1d -e 2d
+  783  cat cubane.pdb | sed -e 1d -e 2-3d
+  784  cat cubane.pdb | sed -e 1d -e 2d
+  785  cat cubane.pdb | sed -e 1d -e 2,3d
+  786  cat cubane.pdb | sed -e 1,2d
+  787  cat cubane.pdb | sed -e 1,2d -e -1d
+  788  cat cubane.pdb | sed -n -e 1,2p
+  789  cat cubane.pdb | sed -n -e 1,2p
+  790  cat cubane.pdb | sed -e 1,2d -e -1d
+  791  cat cubane.pdb | sed -n -e 1,2p
+  792  cat cubane.pdb | sed -e 1,2p
+  793  cat cubane.pdb | sed -e 1,2d
+  794  cat cubane.pdb | sed -n -e 1,2p
+  795  cat cubane.pdb | sed -e 's@T..@HELLO@g'
+  796  cat cubane.pdb | sed -e 's@T.@hello@g'
+  797  cat cubane.pdb | sed -e 's@O*@hello@g'
+  798  cat cubane.pdb | sed -e 's@OO*@hello@g'
+  799  cat cubane.pdb
+  800  cat cubane.pdb | sed -e 's@ATOM.*@hello@g'
+  801  cat cubane.pdb
+  802  cat cubane.pdb | sed -e 's@ATOM.*C@hello@g'
+  803  cat cubane.pdb | sed -e 's@ATOM.*@@g'
+  804  cat cubane.pdb | sed -e 's@ATOM.*C.*@@g'
+  805  cat cubane.pdb | sed -e 's@ATOM.*C.*@@g' | grep -v ''
+  806  cat cubane.pdb | sed -e 's@ATOM.*C.*@@g' | grep -v '^$'
+  807  cat cubane.pdb | sed -e 's@TOM.*C.*@@g' | grep -v '^$'
+  808  cat cubane.pdb | sed -e 's@TOM.*C.*@@g'
+  809  cat cubane.pdb | sed -e 's@^TOM.*C.*@@g'
+  810  cat cubane.pdb | sed -e 's@^.TOM.*C.*@@g'
+  811  cat cubane.pdb | sed -e 's@TOM@@g'
+  812  cat cubane.pdb | sed -e 's@T..@@g'
+  813  cat cubane.pdb | sed -e 's@T..@\0@g'
+  814  cat cubane.pdb | sed -e 's@T..@hello \0 hollo@g'
+  815  cat cubane.pdb | sed -e 's@T..@\0\0@g'
+  816  cat cubane.pdb | sed -e 's@T..@\0\0\t@g'
+  817  cat cubane.pdb | sed -e 's@T..@\0\0\n@g'
+  818  cat cubane.pdb | sed -e 's@T..@\0\0@g'
+  819  cat cubane.pdb | sed -e 's@T..@\1@g'
+  820  cat cubane.pdb | sed -e 's@T(.).@\1@g'
+  821  cat cubane.pdb | sed -e 's@T\(.\).@\1@g'
+  822  cat cubane.pdb | sed -e 's@T\(.\)\(.\)@\2\1@g'
+  823  cat cubane.pdb | sed -e 's@T\(.\)\(.\)@T\2\1@g'
+  824  cat cubane.pdb | sed -e 's@T\(.\)\(.\)@T\2\1@g'
+  825  cat cubane.pdb | sed -e 's@T\(.\)\(.\)@T\2\1@g'

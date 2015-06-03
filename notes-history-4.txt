@@ -1,0 +1,32 @@
+  673  git svn 
+  674  git svn clone https://github.com/twitwi/2015-06-02-cern-lhcb
+  675  git svn clone https://github.com/twitwi/2015-06-02-data data-from-svn
+  676  ls data-from-svn/
+  677  cd data-from-svn/trunk/
+  678  ls
+  679  ls
+  680  git log 
+  681  ls
+  682  emacs README.md 
+  683  git status 
+  684  git add README.md 
+  685  git commit 'fix links, as a list'
+  686  git commit -m 'fix links, as a list'
+  687  git log 
+  688  git push 
+  689  git svn push 
+  690  git svn dcommit 
+  691  git svn dcommit --username=twitwi
+  692  git svn update
+  693  git svn fetch  
+  694  git pull 
+  695  git svn clone http://svn.cern.ch/guest/lhcb/Urania/trunk/PIDCalib
+  696  git svn clone http://svn.cern.ch/guest/lhcb/Urania/trunk/PIDCalib/doc PIDCalib-doc
+  697  ls
+  698  cd PIDCalib-doc/
+  699  ls
+  700  touch can-i-push
+  701  git add can-i-push 
+  702  git commit -m test
+  703  git push 
+  704  git svn dcommit 
